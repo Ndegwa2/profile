@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
+import {
+  Github,
+  Linkedin,
+  Mail,
   Phone,
-  ChevronDown, 
-  Download, 
-  ExternalLink, 
-  Code2, 
-  MonitorPlay, 
+  ChevronDown,
+  Download,
+  ExternalLink,
+  Code2,
+  MonitorPlay,
   Layers,
   Terminal,
   Database,
@@ -19,6 +19,8 @@ import {
   Briefcase
 } from 'lucide-react';
 import { Toaster, toast } from 'sonner';
+import devAvatar from '../assets/dev-avatar.jpg';
+import cvFile from '../imports/samuel_Ndegwa_CV.pdf';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -135,6 +137,16 @@ export default function App() {
     toast.success('Phone number copied to clipboard!');
   };
 
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = cvFile;
+    link.download = 'samuel_Ndegwa_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success('CV downloaded successfully!');
+  };
+
   return (
     <div className="bg-slate-950 text-slate-200 min-h-screen font-sans selection:bg-emerald-500/30 selection:text-emerald-200">
       
@@ -214,7 +226,7 @@ export default function App() {
                 <button onClick={() => scrollTo('projects')} className="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold rounded-lg transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] flex items-center gap-2">
                   Check out my work
                 </button>
-                <button className="px-8 py-4 border border-slate-700 hover:border-emerald-400 text-slate-300 hover:text-emerald-400 font-semibold rounded-lg transition-all flex items-center gap-2">
+                <button onClick={handleDownloadCV} className="px-8 py-4 border border-slate-700 hover:border-emerald-400 text-slate-300 hover:text-emerald-400 font-semibold rounded-lg transition-all flex items-center gap-2">
                   <Download className="w-5 h-5" /> Download CV
                 </button>
               </motion.div>
@@ -226,9 +238,9 @@ export default function App() {
             >
               <div className="w-72 h-72 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-500 opacity-20 blur-3xl absolute -z-10 animate-pulse"></div>
               <div className="w-72 h-72 border-2 border-emerald-500/30 rounded-2xl rotate-6 absolute top-0 -z-10 transition-transform hover:rotate-12 duration-500"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1642257834579-eee89ff3e9fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhZnJpY2FuJTIwbWFsZSUyMGRldmVsb3BlciUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NzM1OTQwOXww&ixlib=rb-4.1.0&q=80&w=1080" 
-                alt="Samuel Ndegwa Profile" 
+              <img
+                src={devAvatar}
+                alt="Samuel Ndegwa Profile"
                 className="w-72 h-72 object-cover rounded-2xl shadow-2xl filter grayscale hover:grayscale-0 transition-all duration-500 relative z-10 border border-slate-800"
               />
             </motion.div>
