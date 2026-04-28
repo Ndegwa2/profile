@@ -1,0 +1,8 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
