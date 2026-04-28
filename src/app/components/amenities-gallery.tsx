@@ -11,7 +11,7 @@ import imgLivingRoom2 from "../assets/e9aa3f4aab3712baf1a2f24183571ed6f6482a51.p
 import imgGarden1 from "../assets/797de31d3f4c81be46470ce7abf8ff9ad3e179d3.png";
 import imgGarden2 from "../assets/b1bfd76f7ced35723129ab124befd5604e53d826.png";
 
-const imgExteriorNew = "https://images.unsplash.com/photo-1708526676835-81b744ec205e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdWJ1cmJhbiUyMGhvdXNlJTIwZXh0ZXJpb3IlMjBncmVlbiUyMGxhd258ZW58MXx8fHwxNzczODMxMzE3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
+const imgExteriorNew = "https://images.unsplash.com/photo-1708526676835-81b744ec205e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdWJ1cmJhbiUyMGhvdXNlJTIwZXh0ZXJpb3IlMjBncmVlbiUyMGxhd258ZW58MXx8fHwxNzczODMxMzE3fDA&ixlib=rb-4.1.0&q=80&w=1080";
 
 interface AmenityPhoto {
   image: string;

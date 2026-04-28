@@ -1,61 +1,49 @@
-**Add your own guidelines here**
-<!--
+# Project Guidelines
 
-System Guidelines
+## Code Style
+- Use functional components with React hooks
+- Follow TypeScript strict mode rules
+- Keep components small and focused (single responsibility principle)
+- Use meaningful variable and function names
+- Add comments only for complex logic, not obvious code
 
-Use this file to provide the AI with rules and guidelines you want it to follow.
-This template outlines a few examples of things you can add. You can add your own sections and format it to suit your needs
+## Styling
+- Use Tailwind CSS utility classes for styling
+- Create reusable component classes when patterns repeat
+- Avoid arbitrary values when possible (use theme configuration)
+- Use responsive design prefixes (sm:, md:, lg:, xl:)
+- Maintain consistent spacing (use 4px increments)
 
-TIP: More context isn't always better. It can confuse the LLM. Try and add the most important rules you need
+## File Organization
+- Group related files in feature-based folders
+- Place component-specific styles within the component file
+- Keep assets in src/assets with clear naming
+- Separate types into src/types directory
+- One component per file unless tightly coupled
 
-# General guidelines
+## Performance
+- Lazy load images and heavy components
+- Use React.memo for expensive computations
+- Optimize re-renders with useCallback and useMemo
+- Keep bundle size small by importing only what's needed
+- Use proper image formats and sizes
 
-Any general rules you want the AI to follow.
-For example:
+## Accessibility
+- Use semantic HTML elements
+- Add alt text to all meaningful images
+- Ensure proper color contrast
+- Make interactive elements keyboard accessible
+- Use ARIA labels when necessary
 
-* Only use absolute positioning when necessary. Opt for responsive and well structured layouts that use flexbox and grid by default
-* Refactor code as you go to keep code clean
-* Keep file sizes small and put helper functions and components in their own files.
+## Testing
+- Write unit tests for utility functions
+- Test component interactions, not implementation details
+- Use meaningful test descriptions
+- Keep tests fast and reliable
 
---------------
-
-# Design system guidelines
-Rules for how the AI should make generations look like your company's design system
-
-Additionally, if you select a design system to use in the prompt box, you can reference
-your design system's components, tokens, variables and components.
-For example:
-
-* Use a base font-size of 14px
-* Date formats should always be in the format “Jun 10”
-* The bottom toolbar should only ever have a maximum of 4 items
-* Never use the floating action button with the bottom toolbar
-* Chips should always come in sets of 3 or more
-* Don't use a dropdown if there are 2 or fewer options
-
-You can also create sub sections and add more specific details
-For example:
-
-
-## Button
-The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate
-users through the application. It provides visual feedback and clear affordances to enhance user experience.
-
-### Usage
-Buttons should be used for important actions that users need to take, such as form submissions, confirming choices,
-or initiating processes. They communicate interactivity and should have clear, action-oriented labels.
-
-### Variants
-* Primary Button
-  * Purpose : Used for the main action in a section or page
-  * Visual Style : Bold, filled with the primary brand color
-  * Usage : One primary button per section to guide users toward the most important action
-* Secondary Button
-  * Purpose : Used for alternative or supporting actions
-  * Visual Style : Outlined with the primary color, transparent background
-  * Usage : Can appear alongside a primary button for less important actions
-* Tertiary Button
-  * Purpose : Used for the least important actions
-  * Visual Style : Text-only with no border, using primary color
-  * Usage : For actions that should be available but not emphasized
--->
+## Git Practices
+- Write clear, descriptive commit messages
+- Make small, focused commits
+- Pull before pushing to avoid conflicts
+- Use feature branches for new work
+- Delete merged branches regularly
