@@ -1,9 +1,8 @@
 import React from 'react';
 import { Home, Users, Sofa, Utensils, Wifi, Shield, Car, Phone, MapPin, Globe, Leaf, Printer, Share2 } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
 import { toast } from 'sonner';
-import imgLivingWide from '../assets/f0958eef109f7eec7c8f8dab5ebb8c3794d3b50c.png';
-import imgLivingClose from '../assets/ad869ff85508a57ecf0150372ff1b66ef19653c2.png';
 
 const AMENITIES = [
   { icon: Home, text: "5-Bedroom Private Home" },
@@ -76,7 +75,7 @@ export function Flyer() {
         {/* Hero Image Section */}
         <div className="relative mb-14">
           <div className="aspect-[16/10] overflow-hidden rounded-[4px] shadow-2xl relative z-10 p-2 bg-white">
-            <img
+            <ImageWithFallback
               src="https://images.unsplash.com/photo-1679939153966-6ec05249db1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3p5JTIwbW9kZXJuJTIwbGl2aW5nJTIwcm9vbSUyMGFpcmJuYiUyMHN1YnVyYmFuJTIwZ2V0YXdheXxlbnwxfHx8fDE3NzE2NTc4MTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
               alt="The Suburban Escape Interior"
               className="w-full h-full object-cover rounded-[2px]"

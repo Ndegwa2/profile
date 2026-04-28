@@ -1,15 +1,16 @@
 import React from 'react';
-import {
-  Home, Users, Sofa, Utensils, Wifi, Shield, Car, Phone, MapPin,
+import { 
+  Home, Users, Sofa, Utensils, Wifi, Shield, Car, Phone, MapPin, 
   Globe, Check, Printer, Share2, MessageSquare, ExternalLink, QrCode
 } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
 import { toast } from 'sonner';
 
 const imgExterior = "https://images.unsplash.com/photo-1708526676835-81b744ec205e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdWJ1cmJhbiUyMGhvdXNlJTIwZXh0ZXJpb3IlMjBncmVlbiUyMGxhd258ZW58MXx8fHwxNzczODMxMzE3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
-import imgLivingWide from "../assets/f0958eef109f7eec7c8f8dab5ebb8c3794d3b50c.png";
-import imgLivingClose from "../assets/ad869ff85508a57ecf0150372ff1b66ef19653c2.png";
+import imgLivingWide from "figma:asset/f0958eef109f7eec7c8f8dab5ebb8c3794d3b50c.png";
+import imgLivingClose from "figma:asset/ad869ff85508a57ecf0150372ff1b66ef19653c2.png";
 
 const AMENITIES = [
   { icon: Home, text: "5-Bedroom Home + Standalone Studios" },
@@ -30,7 +31,7 @@ const IDEAL_FOR = [
   "Work-from-home escapes"
 ];
 
-const PanelWrapper = ({ children, className = "" }: { children?: React.ReactNode; className?: string }) => (
+const PanelWrapper = ({ children, className = "" }) => (
   <div className={`w-full h-full p-8 md:p-10 print:p-6 flex flex-col bg-[#fdfaf5] border-x border-stone-100/50 print:border-none relative overflow-hidden ${className}`}>
     <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/handmade-paper.png')] mix-blend-multiply" />
     <div className="relative z-10 flex flex-col h-full items-stretch">{children}</div>
@@ -171,13 +172,12 @@ export function Brochure() {
             {/* PANEL 1: FRONT COVER */}
             <PanelWrapper className="order-1 print:order-3 md:order-3 bg-stone-900 text-white !p-0">
               <div className="absolute inset-0 pointer-events-none">
-              <img
-                src={imgExterior}
-                alt="Property Exterior"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
-            </div>
+                <ImageWithFallback 
+                  src={imgExterior}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
+              </div>
               <div className="flex flex-col h-full text-center py-8 px-6 relative z-10">
                 <div className="mb-6 print:mb-4">
                   <div className="w-12 h-1 bg-white/60 mx-auto mb-6 print:mb-3" />
@@ -187,9 +187,8 @@ export function Brochure() {
                 
                 <div className="flex-grow flex items-center justify-center p-2">
                   <div className="border border-white/40 p-2 rounded-lg w-full max-w-[280px] print:max-w-[200px] bg-white/10 backdrop-blur-sm mx-auto shadow-2xl">
-                    <img
+                    <ImageWithFallback 
                       src={imgLivingWide}
-                      alt="Living room wide"
                       className="aspect-square object-cover rounded shadow-lg"
                     />
                   </div>
@@ -226,9 +225,8 @@ export function Brochure() {
                     Whether you're escaping city noise or creating memories with loved ones, The Suburban Escape offers a warm, peaceful space designed for rest, connection, and privacy.
                   </p>
                   <div className="aspect-[4/3] overflow-hidden rounded-xl shadow-xl border-4 border-white">
-                     <img
+                     <ImageWithFallback 
                       src={imgLivingClose}
-                      alt="Living room close"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>

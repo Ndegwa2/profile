@@ -2,8 +2,6 @@ import React from 'react';
 import { Home, Users, Sofa, Utensils, Wifi, Shield, Car, Phone, MapPin, Globe, Leaf, Printer, Share2 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { toast } from 'sonner';
-import imgLivingWide from '../assets/f0958eef109f7eec7c8f8dab5ebb8c3794d3b50c.png';
-import imgLivingClose from '../assets/ad869ff85508a57ecf0150372ff1b66ef19653c2.png';
 
 const AMENITIES = [
   { icon: Home, text: "5-Bedroom Private Home" },

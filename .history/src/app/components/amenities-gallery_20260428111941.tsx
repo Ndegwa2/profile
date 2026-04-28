@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-import imgBedroom from "../assets/3d7dcd653130501c009bb13ac3ed271fea878180.png";
-import imgBathroom from "../assets/e986ea14a9867696f2e0e379962d0f776d18fc72.png";
-import imgStairway from "../assets/142ae600e573ea3abb135ae98f3ab60c2b347cfd.png";
-import imgDining from "../assets/9ddb132af6aef1dbd6998d3fa4f863c157e2ba09.png";
-import imgLivingRoom1 from "../assets/a67efee691bb260836841d7097ff4257d04b7e22.png";
-import imgLivingRoom2 from "../assets/e9aa3f4aab3712baf1a2f24183571ed6f6482a51.png";
-import imgGarden1 from "../assets/797de31d3f4c81be46470ce7abf8ff9ad3e179d3.png";
-import imgGarden2 from "../assets/b1bfd76f7ced35723129ab124befd5604e53d826.png";
+import imgBedroom from "figma:asset/3d7dcd653130501c009bb13ac3ed271fea878180.png";
+import imgBathroom from "figma:asset/e986ea14a9867696f2e0e379962d0f776d18fc72.png";
+import imgStairway from "figma:asset/142ae600e573ea3abb135ae98f3ab60c2b347cfd.png";
+import imgDining from "figma:asset/9ddb132af6aef1dbd6998d3fa4f863c157e2ba09.png";
+import imgLivingRoom1 from "figma:asset/a67efee691bb260836841d7097ff4257d04b7e22.png";
+import imgLivingRoom2 from "figma:asset/e9aa3f4aab3712baf1a2f24183571ed6f6482a51.png";
+import imgGarden1 from "figma:asset/797de31d3f4c81be46470ce7abf8ff9ad3e179d3.png";
+import imgGarden2 from "figma:asset/b1bfd76f7ced35723129ab124befd5604e53d826.png";
 
 const imgExteriorNew = "https://images.unsplash.com/photo-1708526676835-81b744ec205e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdWJ1cmJhbiUyMGhvdXNlJTIwZXh0ZXJpb3IlMjBncmVlbiUyMGxhd258ZW58MXx8fHwxNzczODMxMzE3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
 
