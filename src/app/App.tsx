@@ -84,7 +84,7 @@ export default function App() {
       company: 'Moringa School',
       location: 'Nairobi, Kenya',
       period: '2024 - 2025',
-      description: 'Intensive full-stack web development program focusing on JavaScript, React, Node.js, and RESTful APIs. Built and deployed full-stack applications in Agile cross-functional teams under tight deadlines.',
+      description: 'Intensive full-stack web development program focusing on Python -Flask, JavaScript, React, Node.js, and RESTful APIs. Built and deployed full-stack applications in Agile cross-functional teams under tight deadlines.',
     },
     {
       type: 'edu',
@@ -177,10 +177,10 @@ export default function App() {
             ))}
           </div>
 
-          <motion.a 
+          <motion.a
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            href="https://github.com" target="_blank" rel="noreferrer"
+            href="https://github.com/Ndegwa2" target="_blank" rel="noreferrer"
             className="md:hidden text-slate-400 hover:text-emerald-400 transition-colors"
           >
             <Github className="w-6 h-6" />
@@ -418,7 +418,7 @@ export default function App() {
                     ))}
                   </ul>
                   <div className={`flex items-center gap-4 ${idx % 2 !== 0 ? 'justify-start' : 'md:justify-end'}`}>
-                    <a href="#" className="text-slate-400 hover:text-emerald-400 transition-colors">
+                    <a href="https://github.com/Ndegwa2" className="text-slate-400 hover:text-emerald-400 transition-colors">
                       <Github className="w-6 h-6" />
                     </a>
                     <a href="#" className="text-slate-400 hover:text-emerald-400 transition-colors">
@@ -452,7 +452,7 @@ export default function App() {
       {/* Footer */}
       <footer className="py-8 text-center bg-slate-950 border-t border-white/5">
         <div className="flex items-center justify-center gap-6 mb-6">
-          <a href="#" className="text-slate-500 hover:text-emerald-400 transition-colors transform hover:-translate-y-1"><Github className="w-5 h-5" /></a>
+          <a href="https://github.com/Ndegwa2" className="text-slate-500 hover:text-emerald-400 transition-colors transform hover:-translate-y-1"><Github className="w-5 h-5" /></a>
           <a href="#" className="text-slate-500 hover:text-emerald-400 transition-colors transform hover:-translate-y-1"><Linkedin className="w-5 h-5" /></a>
         </div>
         <p className="text-slate-500 font-mono text-sm hover:text-emerald-400 transition-colors cursor-pointer">
@@ -462,7 +462,7 @@ export default function App() {
       
       {/* Side Socials (Desktop) */}
       <div className="hidden lg:flex fixed left-10 bottom-0 flex-col items-center gap-6 z-50 after:content-[''] after:w-px after:h-24 after:bg-slate-700">
-        <a href="#" className="text-slate-400 hover:text-emerald-400 hover:-translate-y-1 transition-all"><Github className="w-5 h-5" /></a>
+        <a href="https://github.com/Ndegwa2" className="text-slate-400 hover:text-emerald-400 hover:-translate-y-1 transition-all"><Github className="w-5 h-5" /></a>
         <a href="#" className="text-slate-400 hover:text-emerald-400 hover:-translate-y-1 transition-all"><Linkedin className="w-5 h-5" /></a>
       </div>
 
